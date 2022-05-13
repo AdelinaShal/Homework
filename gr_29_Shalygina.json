@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "78b7c8d4-93a0-4895-9dcb-39eb4446ad8b",
+		"name": "gr_29",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "the_first",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
+							"\r",
+							"// pm.test(\"Status code is 200\", function () {\r",
+							"//     pm.response.to.have.status(200);\r",
+							"// });\r",
+							"\r",
+							"\r",
+							"\r",
+							"// let item_1 = 2\r",
+							"\r",
+							"// pm.test(\"Item_1 Test\", function () {\r",
+							"//   pm.expect(item_1).to.equal(2)  \r",
+							"// });\r",
+							"\r",
+							"\r",
+							"// let person = {\r",
+							"//     \"age\": \"25\",\r",
+							"//     \"family\": {\r",
+							"//         \"children\": [\r",
+							"//             [\r",
+							"//                 \"Alex\",\r",
+							"//                 24\r",
+							"//             ],\r",
+							"//             [\r",
+							"//                 \"Kate\",\r",
+							"//                 12\r",
+							"//             ]\r",
+							"//         ],\r",
+							"//         \"u_salary_1_5_year\": 6000\r",
+							"//     },\r",
+							"//     \"name\": \"Ada\",\r",
+							"//     \"salary\": 1500\r",
+							"// }\r",
+							"\r",
+							"// pm.test(\"Item_2 Person\", function () {\r",
+							"//   pm.expect(+person.age).to.deep.equal(25)  \r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Item_3 Person\", function () {\r",
+							"//   pm.expect(person.family.children[1][1]).to.deep.equal(12)  \r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Item_4 Person\", function () {\r",
+							"//   pm.expect(person).to.have.property(\"name\")  \r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Item_5 Person\", function () {\r",
+							"//   pm.expect(person).to.deep.include({\"salary\": 1500})  \r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Item_6 Person\", function () {\r",
+							"//   pm.expect(person.family.children[1]).to.deep.include(\"Kate\")  \r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Item_7 Person\", function () {\r",
+							"//   pm.expect(person.family.children[1]).to.be.a(\"Kate\")  \r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "1500",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Ada",
+							"type": "text"
+						},
+						{
+							"key": "auth_token",
+							"value": "/s34lfgbj/Vadim/jjd909/12242kjkWpqc322823r23r3r457271evny",
+							"type": "text"
+						},
+						{
+							"key": "registrationDate",
+							"value": "09.10.2021",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "firstName",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://162.55.220.72:5005/get_test_user"
+			},
+			"response": []
+		},
+		{
+			"name": "EP_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/get_method?name=Adelya&age=24",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Adelya"
+						},
+						{
+							"key": "age",
+							"value": "24"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Adelya",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://162.55.220.72:5005/user_info_3"
+			},
+			"response": []
+		},
+		{
+			"name": "EP_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_1?name=Adelya&age=25&weight=55",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Adelya"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						},
+						{
+							"key": "weight",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_2?name=Adelina&age=25&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Adelina"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_3?name=Adelina&age=25&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Adelina"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_4?name=Adelina&age=25&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Adelina"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Adelya",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://162.55.220.72:5005/user_info_2"
+			},
+			"response": []
+		}
+	]
+}
